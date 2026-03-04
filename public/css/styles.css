@@ -217,7 +217,7 @@ footer {
   padding-left: 10px;
 }
 
-@media (min-width: 800px) {
+
   body {
     background: url('../images/site/checkerboard.jpg') repeat;
   }
@@ -283,4 +283,3 @@ footer {
     grid-column: 1/2;
     grid-row: 1/2;
   }
-}
