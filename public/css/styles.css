@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 800px) {
   body {
     background: url('../images/site/checkerboard.jpg') repeat;
   }
