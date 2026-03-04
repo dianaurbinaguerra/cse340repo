@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary-bg: #014f79;
-  --primary-accent: #014f79;
-  --text-main: #242424;
+  --primary-bg: #004357;
+  --primary-accent: #567d92;
+  --text-main: #656565;
   --text-light: #fff;
   --marker-color: #242424;
   --info-bg: rgba(255,255,255,0.8);
-  --button-hover: #014f79;
+  --button-hover: #003958;
 }
 
 /******* Change Box Model ***************/
@@ -201,16 +201,17 @@ h1{
   height: 70px;
   width: auto;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 2px;
   display: block;
   background: var(--primary-accent);
   padding: 5px;
 }
 
 #upgradesGrid a {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: var(--primary-accent);
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 footer {
@@ -228,16 +229,16 @@ footer {
     margin: 30px auto;
     background: white;
     outline: 4px solid var(--primary-accent);
-    border-radius: 12px;
+    border-radius: 4px;
     padding: 20px;
   }
 
   #logoName {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   #accountLink {
-    font-size: 20px;
+    font-size: 12px;
   }
 
 
