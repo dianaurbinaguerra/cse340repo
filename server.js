@@ -16,6 +16,7 @@ const static = require("./routes/static")
  *************************/
 app.set("view engine", "ejs")
 app.use(expressLayouts)
+app.use(express.static('public'))
 app.set("layout", "./layouts/layout") //not
 
 
@@ -40,6 +41,6 @@ const host = process.env.HOST
 /* ***********************
  * Log statement to confirm server operation
  *************************/
-app.listen(port, () => {
+app.listen(5432, () => {
   console.log(`app listening on ${host}:${port}`)
 })
