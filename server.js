@@ -21,12 +21,10 @@ app.set("layout", "./layouts/layout") // not at views root
 /* ***********************
  * Routes
  *************************/
-app.use(static)
-
-// Index route
-app.get("/", function(req, res) {
-  res.render("index", {title: "Home"})
-})
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 
 /* ***********************
  * Local Server Information
