@@ -12,14 +12,11 @@ const app = express()
 const static = require("./routes/static")
 
 /* ***********************
- * View Engine and Templates
+ * View Engines and Templates 
  *************************/
 app.set("view engine", "ejs")
 app.use(expressLayouts)
-app.use(express.static('public'))
-app.set("layout", "./layouts/layout") //not
-
-
+app.set("layout", "./layouts/layout") // not at views root
 
 /* ***********************
  * Routes
@@ -27,7 +24,7 @@ app.set("layout", "./layouts/layout") //not
 app.use(static)
 
 // Index route
-app.get("/", function(req, res){
+app.get("/", function(req, res) {
   res.render("index", {title: "Home"})
 })
 
@@ -41,6 +38,6 @@ const host = process.env.HOST
 /* ***********************
  * Log statement to confirm server operation
  *************************/
-app.listen(5432, () => {
+app.listen(port, () => {
   console.log(`app listening on ${host}:${port}`)
 })
