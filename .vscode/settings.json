@@ -6,14 +6,8 @@
                     "rejectUnauthorized": true
                 }
             },
-            "ssh": "Enabled",
+            "ssh": "Disabled",
             "previewLimit": 50,
-            "sshOptions": {
-                "port": 5432,
-                "host": "0.0.0.0",
-                "username": "cse340",
-                "password": "4foEpI5nCusjV1whifIkjsF6e31NauX2"
-            },
             "server": "localhost",
             "driver": "PostgreSQL",
             "name": "render.com",
