@@ -16,21 +16,21 @@ CREATE TABLE IF NOT EXISTS public.account
     CONSTRAINT account_pkey PRIMARY KEY (account_id)
 );
 
--- INSERT INTO public.classification (classification_name)
--- VALUES ('Custom'),
--- 	('Sport'),
--- 	('SUV'),
--- 	('Truck'),
--- 	('Sedan');
+INSERT INTO public.classification (classification_name)
+VALUES ('Custom'),
+	('Sport'),
+	('SUV'),
+	('Truck'),
+	('Sedan');
 
 
--- UPDATE public.inventory
--- SET
--- inv_description = REPLACE(inv_description, 'a huge interior','small interiors') 
--- WHERE inv_make = 'GMC' and inv_model = 'Hummer';
+UPDATE public.inventory
+SET
+inv_description = REPLACE(inv_description, 'a huge interior','small interiors') 
+WHERE inv_make = 'GMC' and inv_model = 'Hummer';
 
--- UPDATE
---   public.inventory
--- SET
---   inv_image = REPLACE(inv_image, '/images/', '/images/vehicles/'),
---   inv_thumbnail = REPLACE(inv_thumbnail, '/images/', '/images/vehicles/');
+UPDATE
+  public.inventory
+SET
+  inv_image = REPLACE(inv_image, '/images/', '/images/vehicles/'),
+  inv_thumbnail = REPLACE(inv_thumbnail, '/images/', '/images/vehicles/');
