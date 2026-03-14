@@ -27,6 +27,14 @@ app.use(static)
 app.get("/", function(req, res) {
   res.render("index", {title: "Home"})
 })
+/* ***********************
+* File Not Found Route - must be last route in list
+* Place after all routes
+* Unite 3, Basic Error Handling Activity
+**************************/
+app.use(async (req,res,next) => {
+  next({ status: 404, message: "Sorry, we appear to have lost that page."})
+})
 
 /* ***********************
 *Express Error Handler
