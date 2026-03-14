@@ -1,7 +1,7 @@
-<% if (error) { %>
-<h1>error</h1>
+<% if (title) { %>
+<h1><%= tile %></h1>
 <% } else {
     res.redirect('/')
 } %>
     
-<%- 'Hi, my name is Error'  %>
+<%- message  %>
