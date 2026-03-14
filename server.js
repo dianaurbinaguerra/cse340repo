@@ -12,6 +12,7 @@ const app = express()
 const static = require("./routes/static")
 const utilities = require("./utilities")
 
+
 /* ***********************
  * View Engines and Templates 
  *************************/
