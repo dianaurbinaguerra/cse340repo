@@ -1,2 +1,20 @@
-<h1><%= title %></h1>
-<p><%= message %></p>
+
+<!DOCTYPE html>
+<html land="en">
+<%- include('../partials/head') %>
+
+<body>
+    <div id="wrapper">
+        <%- include('../partials/header') %>
+        <%- include('../partials/navigation') %>
+
+        <main>
+           <%- include('../partials/body') %>
+           <h1><%= title %></h1>
+            <p><%= message %></p>
+        </main>
+
+        <%- include('../partials/footer') %>
+    </div>
+</body>
+</html>
