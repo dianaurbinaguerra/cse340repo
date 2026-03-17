@@ -27,9 +27,7 @@ app.set("layout", "./layouts/layout") // not at views root
 app.use(static)
 
 // Index route
-app.get("/", function(req, res) {
-  res.render("index", {title: "Home"})
-})
+app.get("/", baseController.buildHome)
 /* ***********************
 * File Not Found Route - must be last route in list
 * Place after all routes
