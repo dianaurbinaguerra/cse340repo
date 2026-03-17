@@ -1,1 +1,1 @@
-views/errors/error.ejs
+views/layouts/error.ejs
