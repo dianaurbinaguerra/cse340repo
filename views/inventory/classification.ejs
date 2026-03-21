@@ -1,3 +1,8 @@
+<% if (title) { %>
 <h1><%= title %></h1>
+<% } else {
+    res.redirect('/')
 
-<p>This page will show vehicles by classification.</p>
+} %>
+
+<%-grid %>
