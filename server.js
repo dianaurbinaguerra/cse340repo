@@ -11,8 +11,8 @@ const expressLayouts = require("express-ejs-layouts")
 const env = require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
-const utilities = require("./utilities/index.js")
-const inventoryRoute = require("./routes/inventoryRoute.js")
+const utilities = require('./utilities');
+const inventoryRoute = require("./routes/inventoryRoute")
 
 
 /* ***********************
