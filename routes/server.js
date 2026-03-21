@@ -25,7 +25,9 @@ app.set("layout", "./layouts/layout") // not at views root
 /* ***********************
  * Routes
  *************************/
-app.use(static)
+// app.use(static)
+
+app.use(express.static("public"))
 
 // Index route
 app.get("/", baseController.buildHome)
@@ -49,7 +51,7 @@ app.use(async (req,res,next) => {
 app.use(async (err, req, res, next) => {
   let nav = await utilities.getNav()
   console.error(`Error at: "${req.originalUrl}": ${err.message}`)
-  res.render("errors/error.js", {
+  res.render("errors/error", {
     title: err.status || 'Server Error',
     message: err.message,
     nav
