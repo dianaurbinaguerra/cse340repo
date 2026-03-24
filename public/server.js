@@ -5,6 +5,8 @@
 /* ***********************
  * Require Statements
  *************************/
+const session = require("express-session")
+const pool = require('./database/')
 const baseController = require("./controllers/baseController")
 const express = require("express")
 const expressLayouts = require("express-ejs-layouts")
@@ -18,6 +20,29 @@ const inventoryRoute = require("./routes/inventoryRoute")
 /* ***********************
  * View Engines and Templates 
  *************************/
+/* ***********************
+ * Middleware
+ * ************************/
+ app.use(session({
+  /* where session will be stored */
+  store: new (require('connect-pg-simple')(session))( /* new object sent to the connection >> */{
+    createTableIfMissing: true,
+    pool,
+  }),
+  secret: process.env.SESSION_SECRET,
+  /* keep saving session table after each message (true) */ resave: true,
+  saveUninitialized: true,
+  name: 'sessionId',
+}))
+
+
+// Express Messages Middleware
+app.use(require('connect-flash')())
+app.use(function(req, res, next){
+  res.locals.messages = require('express-messages')(req, res)
+  next()
+})
+
 app.set("view engine", "ejs")
 app.use(expressLayouts)
 app.set("layout", "./layouts/layout") // not at views root
