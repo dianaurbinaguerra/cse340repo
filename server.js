@@ -52,12 +52,13 @@ app.set("layout", "./layouts/layout") // not at views root
 /* ***********************
  * Routes
  *************************/
-// app.use(static)
-
-app.use(express.static("public"))
-// Index route
-app.get("/", baseController.buildHome)
-app.use("/inv", inventoryRoute)
+app.use(express.static("./routes/static"))
+// Index route - W3
+app.get("/", utilities.handleErrors(baseController.buildHome))
+// Inventory routes - W3
+app.use("/inv", require("./routes/inventoryRoute"))
+// Account routes - W4
+app.use("/account", require("./routes/accountRoute"))
 
 /* ***********************
 * File Not Found Route - must be last route in list

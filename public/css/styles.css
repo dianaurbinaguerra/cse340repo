@@ -286,12 +286,11 @@ footer {
   }
 
   .notice {
-  background-color: #e6f4ff;
-  border: 1px solid #3399ff;
-  color: #003366;
+  color: #660000;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
+  font-size: 32px;
 }
 
 .error {

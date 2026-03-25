@@ -1,11 +1,18 @@
-// const express = require("express")
-// const router = new express.Router()
-// const utilities = require("../utilities/")
-// // const accountController = require("../controllers/accountController")
+/* **********************************************
+ * Account routes
+ * Unit 4, deliver login view activity
+ *  ******************************************** */
 
-// // router.get(
-// //   "/",
-// //   utilities.handleErrors(accountController.buildAccount)
-// // )
+const express = require("express")
+const router = new express.Router()
+const accountController = require("../controllers/accountController")
+const utilities = require("../utilities")
 
-// // module.exports = router
+/* *******************************
+ * Deliver Login View
+ * Unit 4, deliver login view activity
+ *  ********************************** */
+
+router.get( "/login",utilities.handleErrors(accountController.buildLogin))
+
+module.exports = router 
