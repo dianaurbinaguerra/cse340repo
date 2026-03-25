@@ -66,7 +66,6 @@ app.use("/account", require("./routes/accountRoute"))
 * Unite 3, Basic Error Handling Activity
 **************************/
 app.use(async (req,res,next) => {
-  console.log("404 route triggered")   // <-- add this line
   next({ status: 404, message: "Sorry, we appear to have lost that page."})
 })
 
