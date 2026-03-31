@@ -43,7 +43,7 @@ invCont.buildDetail = async function (req, res, next) {
  *  Assignment 3, Task 3
  * ************************************ */
 invCont.throwError = async function (req, res) {
-  throw new Error("I am an intentional error")
+  throw new Error("I made this error on purpose")
 }
 
 
