@@ -18,3 +18,5 @@ async function buildRegister(req, res, next) {
     errors: null,
   })
 }
+
+module.exports = { buildLogin }
