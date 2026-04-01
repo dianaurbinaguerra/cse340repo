@@ -737,5 +737,67 @@ text-align: center;
     object-fit: contain;
   }
 
+
+    .login-container {
+    width: 350px;
+    margin: 80px auto;
+    padding: 25px;
+    background: #01b0d3;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    color: #fff;
+  }
+
+  .login-container h2 {
+    margin-bottom: 15px;
+  }
+
+  .login-container label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+
+  .login-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #e6e6e6;
+    font-size: 14px;
+  }
+
+  .login-container input:focus {
+    outline: none;
+    background: #fff;
+  }
+
+  .login-btn {
+    display: block;
+    margin: 20px auto 10px;
+    padding: 10px 25px;
+    background: #d9d9d9;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .login-btn:hover {
+    background: #c4c4c4;
+  }
+
+  .signup {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .signup a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
   /*#endregion*/
 }
+
