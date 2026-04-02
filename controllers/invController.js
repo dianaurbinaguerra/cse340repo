@@ -53,7 +53,7 @@ invCont.throwError = async function (req, res) {
 
 async function buildManagement(req, res, next) {
     let nav = await utilities.getNav()
-    res.render("/inv", {
+    res.render("./inv", {
         title: "Inventory Management",
         nav,
     })
