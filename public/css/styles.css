@@ -862,6 +862,69 @@ text-align: center;
     text-decoration: underline;
     font-weight: bold;
   }
+
+  /* classification management view */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+}
+
+.classification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form styling */
+.classification-container form {
+  background-color: #1e73be; /* blue background */
+  padding: 30px;
+  border-radius: 15px; /* rounded corners */
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+/* Label */
+.classification-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Input */
+.classification-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+/* Message */
+.classification-message a {
+  font-size: 12px;
+  color: #ffdddd;
+}
+
+/* Button */
+.classification-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #0d47a1;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.classification-btn:hover {
+  background-color: #1565c0;
+}
   /*#endregion*/
 }
 

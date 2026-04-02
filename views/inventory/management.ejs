@@ -3,19 +3,15 @@
 <%- include('../partials/head') %>
 
 <body>
-    <div class="login-container">
+    <h1>Inventory Management</h1>
+    <div class="classification-container">
   <form>
-    <label>Email:</label>
-    <input type="email" placeholder="Enter email">
-
-    <label>Password:</label>
-    <input type="password" placeholder="Enter password">
-
-    <button class="login-btn">LOGIN</button>
-
-    <div class="signup">
-      No account? <a href="/account/register">Sign-up</a>
-    </div>
+    <label>Classification Name:</label>
+     <div class="classification-message">
+        <a>Name must be chascters only</a>
+      </div>
+     <input type="text" placeholder="Enter classification">
+    <button class="classification-btn">Add Classification</button>
   </form>
 </div>
 </body>

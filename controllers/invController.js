@@ -46,5 +46,17 @@ invCont.throwError = async function (req, res) {
   throw new Error("I made this error on purpose")
 }
 
+/* ****************************************
+ *  Build inventory management
+ * D.A
+ * ************************************ */
+
+async function buildManagement(req, res, next) {
+    let nav = await utilities.getNav()
+    res.render("/inv", {
+        title: "Inventory Management",
+        nav,
+    })
+}
 
 module.exports = invCont
