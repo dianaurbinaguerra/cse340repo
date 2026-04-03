@@ -376,87 +376,164 @@ section {
    2.4 Forms 
 ************************************************/
 /*#region*/
-label+div {
-  font-size: .7rem;
-  margin-left: .5rem;
+  .login-container {
+    width: 350px;
+    margin: 80px auto;
+    padding: 25px;
+    background: #01b0d3;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    color: #fff;
+  }
+
+  .login-container h2 {
+    margin-bottom: 15px;
+  }
+
+  .login-container label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+
+  .login-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #e6e6e6;
+    font-size: 14px;
+  }
+
+  .login-container input:focus {
+    outline: none;
+    background: #fff;
+  }
+
+  .login-btn {
+    display: block;
+    margin: 20px auto 10px;
+    padding: 10px 25px;
+    background: #d9d9d9;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .login-btn:hover {
+    background: #c4c4c4;
+  }
+
+  .signup {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .signup a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
 }
 
-input[name$='Image'],
-input[name$='Thumbnail'] {
-  width: 40ch;
-  max-width: 100%;
-}
-
-*[required]:focus:invalid {
-  background-color: var(--invalid);
-}
-
-*[required]:focus:valid {
-  background-color: var(--valid);
-  color: var(--primary-text);
-}
-
-#pswdBtn {
-  width: 9rem;
-  height: 40px;
-  padding: .75rem;
-  border: 1px solid var(--primary-text);
-  background-color: var(--primary-text);
+/* Container styled like your previous form */
+#registerContainer {
+  width: 360px;
+  margin: 60px auto;
+  padding: 25px;
+  background:  #01b0d3;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   color: #fff;
-  border-radius: 3px;
 }
 
-#loginContainer{
-  max-width: 25rem;
-  margin: 0 auto;
-  padding: 1rem .5rem;
-  background-color: var(--main-accent);
-  font-size: larger;
-  border-radius: .5rem;
-}
-#loginContainer p{
-text-align: center;
-  
-}
-#loginContainer a{
-  font-weight: 700;
-  color: var(--primary-text);
+/* Title */
+h1 {
+  text-align: center;
 }
 
-#registerContainer{
-  max-width: 30rem;
-  margin: 0 auto;
-  padding: 1rem .5rem;
-  background-color: var(--main-accent);
-  font-size: larger;
-  border-radius: .5rem;
+/* Form layout */
+#registerForm fieldset {
+  border: none;
+  padding: 0;
 }
 
-#registerContainer p{
-  font-style: italic;
-  font-variant: small-caps;
-}
-#registerContainer button{
-  font-size: larger;
-  margin-top: 1rem;
+/* Labels */
+#registerForm label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
 }
 
+/* Inputs */
+#registerForm input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  background: #e6e6e6;
+  font-size: 14px;
+}
+
+#registerForm input:focus {
+  outline: none;
+  background: #fff;
+}
+
+/* Password hint text */
+#registerForm i {
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+  color: #ddd;
+}
+
+/* Show password button */
 #pswdBtn {
-  width: 12rem;
-  height: 40px;
-  padding: .5rem;
-  border: 1px solid #3a3a3a;
-  background-color: #3a3a3a;
+  margin-top: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
   color: #fff;
+}
+
+/* Submit button */
+#registerForm button {
+  display: block;
+  margin: 20px auto 10px;
+  padding: 10px 25px;
+  background: #d9d9d9;
+  border: none;
   border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-:is(fieldset) input,
-:is(fieldset) div,
-:is(fieldset) span,
-:is(fieldset) textarea,
-:is(fieldset) select{
-  margin-bottom: .75rem;
+#registerForm button:hover {
+  background: #c4c4c4;
+}
+
+/* Messages / errors */
+.message.warning {
+  background: #ffdddd;
+  color: #900;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.message.warning li {
+  margin-left: 15px;
 }
 /*#endregion*/
 
@@ -737,194 +814,5 @@ text-align: center;
     object-fit: contain;
   }
 
-
-    .login-container {
-    width: 350px;
-    margin: 80px auto;
-    padding: 25px;
-    background: #01b0d3;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    color: #fff;
-  }
-
-  .login-container h2 {
-    margin-bottom: 15px;
-  }
-
-  .login-container label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-  }
-
-  .login-container input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    background: #e6e6e6;
-    font-size: 14px;
-  }
-
-  .login-container input:focus {
-    outline: none;
-    background: #fff;
-  }
-
-  .login-btn {
-    display: block;
-    margin: 20px auto 10px;
-    padding: 10px 25px;
-    background: #d9d9d9;
-    border: none;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .login-btn:hover {
-    background: #c4c4c4;
-  }
-
-  .signup {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .signup a {
-    color: #ffffff;
-    text-decoration: underline;
-    font-weight: bold;
-  }
-
-  /* Registration Form */
-    .register-container {
-    width: 360px;
-    margin: 60px auto;
-    padding: 25px;
-    background: #01b0d3;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    color: #fff;
-  }
-
-  .register-container h2 {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 6px;
-    background: #e6e6e6;
-    font-size: 14px;
-  }
-
-  input:focus {
-    outline: none;
-    background: #fff;
-  }
-
-  .register-btn {
-    display: block;
-    margin: 20px auto 10px;
-    padding: 10px 25px;
-    background: #d9d9d9;
-    border: none;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .register-btn:hover {
-    background: #c4c4c4;
-  }
-
-  .login-link {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .login-link a {
-    color: #fff;
-    text-decoration: underline;
-    font-weight: bold;
-  }
-
-  /* classification management view */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
-}
-
-.classification-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Form styling */
-.classification-container form {
-  background-color: #1e73be; /* blue background */
-  padding: 30px;
-  border-radius: 15px; /* rounded corners */
-  width: 320px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  color: white;
-}
-
-/* Label */
-.classification-container label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-/* Input */
-.classification-container input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  margin-bottom: 15px;
-  outline: none;
-}
-
-/* Message */
-.classification-message a {
-  font-size: 12px;
-  color: #ffdddd;
-}
-
-/* Button */
-.classification-btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #0d47a1;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.classification-btn:hover {
-  background-color: #1565c0;
-}
   /*#endregion*/
 }
-

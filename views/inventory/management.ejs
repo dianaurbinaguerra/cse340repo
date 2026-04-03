@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html land="en">
-<%- include('../partials/head') %>
+<%# Unit 4, Select Inv Item activity %>
+<% if (title) {%>
+<h1><%= title %></h1>
+<%} else {res.redirect('/')} %>
 
-<body>
-    <h1>Inventory Management</h1>
-    <div class="classification-container">
-  <form>
-    <label>Classification Name:</label>
-     <div class="classification-message">
-        <a>Name must be chascters only</a>
-      </div>
-     <input type="text" placeholder="Enter classification">
-    <button class="classification-btn">Add Classification</button>
-  </form>
-</div>
-</body>
-</html>
+<%- messages() %>
+
+
+<% if (errors) { %>
+<ul class="message warning">
+  <% errors.array().forEach(error => { %>
+  <li><%= error.msg %></li>
+  <%  }) %>
+</ul>
+<% } %>
+
+<ul class="boldList">
+  <li><a href="/inv/newClassification/" title="Click to add a new vehicle classification">Add New Classification</a></li>
+  <li><a href="/inv/newVehicle/" title="Click to add a new vehicle">Add New Vehicle</a></li>
+</ul>
+

@@ -1,30 +1,39 @@
+/* ************************************
+ *  Account Controller
+ *  Unit 4, deliver login view activity
+ *  ******************************** */
 const utilities = require('../utilities')
-const invModel = require("../models/account-model")
-const bcrypt = require("bcryptjs")
+const accountModel = require('../models/account-model')
 const jwt = require("jsonwebtoken")
 require("dotenv").config()
 
+
+/* ****************************************
+*  Deliver login view
+*  Unit 4, deliver login view activity
+* *************************************** */
 async function buildLogin(req, res, next) {
-    let nav = await utilities.getNav()
-    res.render("account/login", {
-        title: "Login",
-        nav,
-    })
+  let nav = await utilities.getNav()
+  res.render("./account/login", {
+    title: "Login",
+    nav,
+  })
 }
+
 
 /* ****************************************
 *  Deliver registration view
+*  Unit 4, deliver register view activity
 * *************************************** */
 async function buildRegister(req, res, next) {
   let nav = await utilities.getNav()
-  res.render("account/register", {
+  res.render("./account/register", {
     title: "Register",
     nav,
     errors: null,
   })
 }
 
-/* ****************************************
 /* ****************************************
 *  Process Registration
 * *************************************** */
