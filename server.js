@@ -47,6 +47,8 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
+// Unit 5
+app.use(cookieParser())
 
 // Express Messages Middleware
 app.use(require('connect-flash')())
@@ -62,6 +64,10 @@ app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-
 // Unit 5 Authentication cookie use
 app.use(cookieParser())
 
+
+// Unit 5 
+
+app.use(utilities.checkJWTToken)
 /* ***********************
  * View Engine And Templates
  *************************/
