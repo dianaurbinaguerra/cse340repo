@@ -58,3 +58,40 @@
         </div>
     </div>
 </div>
+<div class="reviews-container">
+    <h1>DMC Delorean Reviews</h1>
+
+    <ul>
+        <% if (reviews && reviews.length > 0) { %>
+            <% reviews.forEach(review => { %>
+                <li>
+                    "<%= review.review_text %>" 
+                    (<%= review.rating %>/5)
+                </li>
+            <% }) %>
+        <% } else { %>
+            <li>No reviews yet. Be the first!</li>
+        <% } %>
+    </ul>
+
+    <h2>Add Your Review</h2>
+    <form action="/reviews/add" method="POST">
+        
+        <label for="review_text">Review:</label><br>
+        <textarea name="review_text" id="review_text" required></textarea><br>
+
+        <label for="rating">Rating:</label><br>
+        <select name="rating" id="rating" required>
+            <option value="">Select Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
+
+        <input type="hidden" name="vehicle_id" value="1">
+
+        <button type="submit">Submit Review</button>
+    </form>
+</div>

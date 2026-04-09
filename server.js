@@ -18,6 +18,7 @@ const session = require("express-session")
 const pool = require('./database/')
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
+const reviewRoute = require("./routes/reviewRoute")
 
 /* ***********************
  * Middleware
@@ -89,7 +90,8 @@ app.get("/", utilities.handleErrors(baseController.buildHome))
 app.use("/inv", inventoryRoute)
 // Account routes - Unit 4, Deliver Login activity
 app.use("/account", accountRoute)
-
+//
+app.use("/reviews", reviewRoute)
 
 
 // File Not Found Route - must be last route in list
@@ -116,7 +118,6 @@ app.use(async (err, req, res, next) => {
     nav,
   })
 })
-
 
 
 

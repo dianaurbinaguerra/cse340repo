@@ -17,16 +17,44 @@
 
 </section>
 <div class="flex-content">
-  <section id="review">
-    <h2>DMC Delorean Reviews</h2>
-    <ul>
-      <li>"So fast it's almost like traveling in time." (4/5)</li>
-      <li>"Coolest ride on the road." (4/5)</li>
-      <li>"I'm feeling McFly!" (5/5)</li>
-      <li>"The most futuristic ride of our day." (4.5/5)</li>
-      <li>"80's livin and I love it!" (5/5)</li>
-    </ul>
-  </section>
+<section id="review">
+  <h2>DMC Delorean Reviews</h2>
+
+  <ul>
+    <% if (reviews && reviews.length > 0) { %>
+      <% reviews.forEach(review => { %>
+        <li>
+          "<%= review.review_text %>" 
+          (<%= review.rating %>/5)
+        </li>
+      <% }) %>
+    <% } else { %>
+      <li>No reviews yet. Be the first!</li>
+    <% } %>
+  </ul>
+
+  <h3>Add Your Review</h3>
+  <form action="/reviews/add" method="POST">
+    
+    <label for="review_text">Review:</label><br>
+    <textarea name="review_text" id="review_text" required></textarea><br>
+
+    <label for="rating">Rating:</label><br>
+    <select name="rating" id="rating" required>
+      <option value="">Select Rating</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select><br><br>
+
+    <input type="hidden" name="vehicle_id" value="1">
+
+    <button type="submit">Submit Review</button>
+  </form>
+
+</section>
   <section id="add-ons">
     <h2>Delorean Upgrades</h2>
     <div class="flex">
