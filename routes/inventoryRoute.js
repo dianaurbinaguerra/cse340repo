@@ -30,7 +30,7 @@ router.get(
  **************************************** */
 router.get(
   "/",
-  //utilities.checkAccountType,
+  utilities.checkAccountType,
   utilities.handleErrors(invController.buildManagementView)
 )
 
@@ -41,7 +41,7 @@ router.get(
  **************************************** */
 router.get(
   "/newClassification",
-  //utilities.checkAccountType,
+  utilities.checkAccountType,
   utilities.handleErrors(invController.newClassificationView)
 )
 
@@ -53,7 +53,7 @@ router.get(
  **************************************** */
 router.post(
   "/addClassification",
-  //utilities.checkAccountType,
+  utilities.checkAccountType,
   invChecks.classificationRule(),
   invChecks.checkClassificationData,
   utilities.handleErrors(invController.addClassification)
@@ -66,7 +66,7 @@ router.post(
  **************************************** */
 router.get(
   "/newVehicle",
-  //utilities.checkAccountType,
+  utilities.checkAccountType,
   utilities.handleErrors(invController.newInventoryView)
 )
 
@@ -77,7 +77,7 @@ router.get(
  **************************************** */
 router.post(
   "/addInventory",
-  //utilities.checkAccountType,
+  utilities.checkAccountType,
   invChecks.newInventoryRules(),
   invChecks.checkInventoryData,
   utilities.handleErrors(invController.addInventory)
@@ -89,7 +89,7 @@ router.post(
  **************************************** */
 router.get(
   "/getInventory/:classification_id",
-  //utilities.checkAccountType,
+  utilities.checkAccountType,
   utilities.handleErrors(invController.getInventoryJSON)
 )
 
@@ -100,7 +100,7 @@ router.get(
  **************************************** */
 router.get(
   "/edit/:inv_id",
-  //utilities.checkAccountType,
+  utilities.checkAccountType,
   utilities.handleErrors(invController.editInvItemView)
 )
 
@@ -111,7 +111,7 @@ router.get(
  **************************************** */
 router.post(
   "/update",
-  //utilities.checkAccountType,
+  utilities.checkAccountType,
   invChecks.newInventoryRules(),
   invChecks.checkUpdateData,
   utilities.handleErrors(invController.updateInventory)
@@ -124,7 +124,7 @@ router.post(
  **************************************** */
 router.get(
   "/delete/:inv_id",
-  //utilities.checkAccountType,
+  utilities.checkAccountType,
   utilities.handleErrors(invController.deleteView)
 )
 
@@ -134,7 +134,7 @@ router.get(
  * checkAccountType added Unit 5, Assignment 5, Task 2
  **************************************** */
 router.post("/delete", 
-//utilities.checkAccountType, 
+utilities.checkAccountType, 
 utilities.handleErrors(invController.deleteItem)
 )
 

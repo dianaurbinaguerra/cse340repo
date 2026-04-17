@@ -18,7 +18,6 @@ const session = require("express-session")
 const pool = require('./database/')
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
-const reviewRoute = require("./routes/reviewRoute")
 
 /* ***********************
  * Middleware
@@ -48,8 +47,6 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
-// Unit 5
-app.use(cookieParser())
 
 // Express Messages Middleware
 app.use(require('connect-flash')())
@@ -66,6 +63,8 @@ app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-
 app.use(cookieParser())
 // Unit 5, Login Process activity
 app.use(utilities.checkJWTToken)
+
+
 /* ***********************
  * View Engine And Templates
  *************************/
@@ -87,8 +86,7 @@ app.get("/", utilities.handleErrors(baseController.buildHome))
 app.use("/inv", inventoryRoute)
 // Account routes - Unit 4, Deliver Login activity
 app.use("/account", accountRoute)
-//review
-app.use("/reviews", reviewRoute)
+
 
 
 // File Not Found Route - must be last route in list
@@ -115,6 +113,7 @@ app.use(async (err, req, res, next) => {
     nav,
   })
 })
+
 
 
 
